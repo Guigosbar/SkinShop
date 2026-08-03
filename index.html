@@ -1,0 +1,1990 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>SKIN1004 Matrixyl 10 — Ampola coreana com 10% de peptídeos</title>
+<meta name="description" content="A ampola coreana que devolve firmeza. 10% de Matrixyl 3000®, hialurônico e centella de Madagascar. Enviado do Brasil, original, parcelado sem juros.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,500;12..96,600;12..96,700&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root {
+  --cream: #F5EEE1;
+  --cream-2: #EDE3D0;
+  --ivory: #FAF4E7;
+  --nude: #E5D2B8;
+  --peach: #E8B99C;
+  --peach-light: #F2D4BE;
+  --rose: #D4A090;
+  --caramel: #B47C4E;
+  --gold: #C79955;
+  --mocha: #3D2A1F;
+  --brown: #5C4638;
+  --brown-soft: #8B7266;
+  --text: #3D2A1F;
+  --text-soft: #6B5749;
+  --border: #E0D2BC;
+  --border-soft: #ECDFC7;
+  --star: #E8A93A;
+  --success: #6B8E5E;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--cream);
+  color: var(--text);
+  font-family: 'Manrope', -apple-system, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  padding-bottom: 80px;
+}
+
+@media (min-width: 900px) {
+  body { padding-bottom: 0; }
+}
+
+::selection { background: var(--peach); color: var(--mocha); }
+img { max-width: 100%; display: block; }
+button { font-family: inherit; }
+
+/* ─────────── TYPO ─────────── */
+.display {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  line-height: 1;
+  font-variation-settings: 'opsz' 96;
+}
+.mono {
+  font-family: 'Manrope', sans-serif;
+  font-size: 11px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+/* ─────────── ANNOUNCEMENT BAR ─────────── */
+.announce {
+  background: var(--mocha);
+  color: var(--cream);
+  text-align: center;
+  padding: 10px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+}
+.announce strong { color: var(--peach); }
+
+/* ─────────── NAV ─────────── */
+.nav {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  padding: 18px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  background: rgba(245, 238, 225, 0.85);
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.3s ease;
+}
+.nav.scrolled { border-bottom-color: var(--border-soft); }
+
+.nav__brand {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: -0.03em;
+  color: var(--mocha);
+  text-decoration: none;
+  font-variation-settings: 'opsz' 96;
+}
+.nav__brand span { color: var(--caramel); }
+
+.nav__center {
+  display: flex;
+  gap: 32px;
+}
+.nav__center a {
+  color: var(--brown);
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+.nav__center a:hover { color: var(--mocha); }
+
+.nav__right {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+.nav__cart {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.2s;
+}
+.nav__cart:hover { background: var(--peach-light); }
+.nav__cart svg { width: 18px; height: 18px; color: var(--mocha); }
+.nav__cart-count {
+  position: absolute;
+  top: -4px;
+  right: -4px;
+  background: var(--caramel);
+  color: var(--cream);
+  font-size: 10px;
+  font-weight: 700;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav__cta {
+  background: var(--mocha);
+  color: var(--cream) !important;
+  padding: 12px 22px;
+  border-radius: 999px;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s;
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.nav__cta:hover { background: var(--brown); transform: translateY(-1px); }
+
+@media (max-width: 900px) {
+  .nav { padding: 14px 20px; }
+  .nav__center { display: none; }
+  .nav__cta { padding: 10px 16px; font-size: 12px; }
+}
+
+/* ─────────── CONTAINER ─────────── */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 40px;
+}
+@media (max-width: 720px) { .container { padding: 0 20px; } }
+
+/* ─────────── BUTTONS ─────────── */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  padding: 18px 32px;
+  border-radius: 999px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.2s ease;
+  border: none;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+}
+.btn--primary {
+  background: var(--mocha);
+  color: var(--cream);
+  box-shadow: 0 4px 14px rgba(61, 42, 31, 0.15);
+}
+.btn--primary:hover {
+  background: var(--brown);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(61, 42, 31, 0.25);
+}
+.btn--primary svg { width: 18px; height: 18px; }
+.btn--accent {
+  background: var(--caramel);
+  color: var(--cream);
+  box-shadow: 0 4px 14px rgba(180, 124, 78, 0.25);
+}
+.btn--accent:hover {
+  background: var(--mocha);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(61, 42, 31, 0.3);
+}
+.btn--ghost {
+  background: transparent;
+  color: var(--mocha);
+  border: 1.5px solid var(--border);
+}
+.btn--ghost:hover { border-color: var(--mocha); background: var(--ivory); }
+.btn--large { padding: 22px 40px; font-size: 17px; }
+.btn--block { width: 100%; }
+
+/* ─────────── HERO ─────────── */
+.hero {
+  padding: 60px 0 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+.hero__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px;
+  background: var(--peach-light);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--caramel);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+.hero__badge::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  background: var(--caramel);
+  border-radius: 50%;
+  animation: pulse 2s ease infinite;
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+.hero__rating {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+  font-size: 14px;
+  color: var(--text-soft);
+}
+.stars {
+  display: inline-flex;
+  gap: 2px;
+  color: var(--star);
+}
+.stars svg { width: 16px; height: 16px; fill: currentColor; }
+.hero__rating strong { color: var(--mocha); font-weight: 700; }
+
+.hero__headline {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(44px, 6vw, 78px);
+  font-weight: 500;
+  line-height: 0.98;
+  letter-spacing: -0.035em;
+  color: var(--mocha);
+  margin-bottom: 24px;
+  font-variation-settings: 'opsz' 96;
+}
+.hero__headline span {
+  color: var(--caramel);
+  font-style: italic;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-weight: 500;
+}
+
+.hero__sub {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text-soft);
+  max-width: 520px;
+  margin-bottom: 32px;
+}
+.hero__sub strong { color: var(--mocha); font-weight: 700; }
+
+.hero__pricing {
+  display: flex;
+  align-items: baseline;
+  gap: 14px;
+  margin-bottom: 8px;
+}
+.hero__price-old {
+  font-size: 16px;
+  color: var(--brown-soft);
+  text-decoration: line-through;
+}
+.hero__price-now {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 42px;
+  font-weight: 600;
+  color: var(--mocha);
+  line-height: 1;
+  font-variation-settings: 'opsz' 96;
+}
+.hero__price-off {
+  background: var(--success);
+  color: var(--cream);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 999px;
+  letter-spacing: 0.02em;
+}
+.hero__parcel {
+  font-size: 14px;
+  color: var(--text-soft);
+  margin-bottom: 24px;
+}
+.hero__parcel strong { color: var(--mocha); font-weight: 600; }
+
+.hero__actions {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 28px;
+}
+
+.hero__perks {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px 24px;
+  font-size: 13px;
+  color: var(--text-soft);
+  align-items: center;
+}
+.hero__perks span {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.hero__perks svg { width: 16px; height: 16px; color: var(--success); flex-shrink: 0; }
+
+/* Hero visual */
+.hero__visual {
+  position: relative;
+  aspect-ratio: 4/5;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--peach-light) 0%, var(--nude) 50%, var(--rose) 100%);
+  box-shadow: 0 20px 60px rgba(61, 42, 31, 0.15);
+}
+.hero__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.hero__overlay {
+  position: absolute;
+  bottom: 24px;
+  left: 24px;
+  right: 24px;
+  background: rgba(250, 244, 231, 0.92);
+  backdrop-filter: blur(10px);
+  border-radius: 14px;
+  padding: 16px 20px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.hero__overlay-num {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 36px;
+  font-weight: 600;
+  color: var(--caramel);
+  line-height: 1;
+}
+.hero__overlay-text {
+  font-size: 13px;
+  color: var(--brown);
+  line-height: 1.3;
+}
+.hero__overlay-text strong { color: var(--mocha); display: block; font-weight: 700; font-size: 14px; }
+
+@media (max-width: 900px) {
+  .hero__grid { grid-template-columns: 1fr; gap: 40px; }
+  .hero__visual { order: -1; max-width: 400px; margin: 0 auto; }
+  .hero { padding: 40px 0 60px; }
+}
+
+/* ─────────── TRUST BAR ─────────── */
+.trust {
+  background: var(--ivory);
+  border-top: 1px solid var(--border-soft);
+  border-bottom: 1px solid var(--border-soft);
+  padding: 24px 0;
+}
+.trust__grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  text-align: center;
+}
+.trust__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.trust__icon {
+  width: 32px;
+  height: 32px;
+  color: var(--caramel);
+}
+.trust__icon svg { width: 100%; height: 100%; }
+.trust__text {
+  font-size: 12px;
+  color: var(--brown);
+  font-weight: 600;
+  line-height: 1.3;
+}
+.trust__text strong { color: var(--mocha); display: block; font-size: 13px; }
+
+@media (max-width: 900px) {
+  .trust__grid { grid-template-columns: repeat(2, 1fr); gap: 24px; }
+}
+
+/* ─────────── SECTIONS ─────────── */
+.section { padding: 100px 0; position: relative; }
+@media (max-width: 720px) { .section { padding: 70px 0; } }
+
+.section__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 14px;
+  background: var(--peach-light);
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--caramel);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.section__title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(36px, 4.8vw, 60px);
+  font-weight: 500;
+  line-height: 1;
+  letter-spacing: -0.03em;
+  color: var(--mocha);
+  margin-bottom: 24px;
+  max-width: 900px;
+  font-variation-settings: 'opsz' 96;
+}
+.section__title span { color: var(--caramel); font-style: italic; }
+
+.section__lede {
+  font-size: 18px;
+  line-height: 1.55;
+  color: var(--text-soft);
+  max-width: 640px;
+  margin-bottom: 56px;
+}
+.section__lede strong { color: var(--mocha); font-weight: 600; }
+
+/* ─────────── PRODUCT SHOWCASE ─────────── */
+.product { background: var(--ivory); }
+.product__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 80px;
+  align-items: center;
+}
+.product__visual {
+  aspect-ratio: 1;
+  border-radius: 20px;
+  overflow: hidden;
+  background: linear-gradient(135deg, var(--nude) 0%, var(--peach-light) 100%);
+  position: relative;
+  box-shadow: 0 16px 40px rgba(61, 42, 31, 0.1);
+}
+.product__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.product__badge {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: var(--caramel);
+  color: var(--cream);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 8px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  z-index: 2;
+}
+.product__badge2 {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background: var(--ivory);
+  color: var(--mocha);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 10px 14px;
+  border-radius: 999px;
+  z-index: 2;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+.product__badge2 svg { width: 14px; height: 14px; color: var(--star); fill: currentColor; }
+
+.product__content h2 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.05;
+  color: var(--mocha);
+  margin-bottom: 20px;
+  font-variation-settings: 'opsz' 96;
+}
+.product__content h2 span { color: var(--caramel); font-style: italic; }
+.product__content > p {
+  font-size: 16px;
+  line-height: 1.65;
+  color: var(--text-soft);
+  margin-bottom: 24px;
+}
+.product__facts {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 32px;
+  padding: 24px;
+  background: var(--cream);
+  border-radius: 14px;
+}
+.product__fact-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brown-soft);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 4px;
+}
+.product__fact-value {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--mocha);
+  font-variation-settings: 'opsz' 96;
+}
+
+@media (max-width: 900px) {
+  .product__grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* ─────────── BENEFITS GRID ─────────── */
+.benefits { background: var(--cream); }
+.benefits__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+.benefit {
+  padding: 32px 28px;
+  background: var(--ivory);
+  border-radius: 18px;
+  border: 1px solid var(--border-soft);
+  transition: all 0.3s ease;
+  position: relative;
+}
+.benefit:hover {
+  transform: translateY(-4px);
+  border-color: var(--peach);
+  box-shadow: 0 12px 30px rgba(61, 42, 31, 0.08);
+}
+.benefit__icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  background: var(--peach-light);
+  color: var(--caramel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+.benefit__icon svg { width: 24px; height: 24px; }
+.benefit h3 {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--mocha);
+  margin-bottom: 8px;
+  font-variation-settings: 'opsz' 96;
+}
+.benefit p {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+.benefits__cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) { .benefits__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 560px) { .benefits__grid { grid-template-columns: 1fr; } }
+
+/* ─────────── BEFORE / AFTER ─────────── */
+.results {
+  background: var(--mocha);
+  color: var(--cream);
+  padding: 100px 0;
+  position: relative;
+}
+.results .section__eyebrow {
+  background: rgba(232, 185, 156, 0.15);
+  color: var(--peach);
+}
+.results .section__title { color: var(--cream); }
+.results .section__title span { color: var(--peach); }
+.results .section__lede { color: rgba(245, 238, 225, 0.7); }
+.results .section__lede strong { color: var(--cream); }
+
+.results__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  margin-top: 20px;
+}
+.results__card {
+  border-radius: 20px;
+  overflow: hidden;
+  aspect-ratio: 3/4;
+  position: relative;
+  background: linear-gradient(135deg, var(--brown) 0%, var(--brown-soft) 100%);
+}
+.results__photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.results__label {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  background: rgba(61, 42, 31, 0.8);
+  backdrop-filter: blur(10px);
+  color: var(--cream);
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.results__label--after { background: var(--caramel); }
+
+.results__meta {
+  margin-top: 40px;
+  padding: 24px;
+  background: rgba(232, 185, 156, 0.08);
+  border-radius: 14px;
+  font-size: 13px;
+  color: rgba(245, 238, 225, 0.6);
+  line-height: 1.55;
+  border-left: 3px solid var(--peach);
+}
+.results__meta strong { color: var(--peach); }
+
+.results__cta {
+  text-align: center;
+  margin-top: 48px;
+}
+.results__cta .btn--primary {
+  background: var(--peach);
+  color: var(--mocha);
+}
+.results__cta .btn--primary:hover { background: var(--cream); }
+
+@media (max-width: 720px) {
+  .results__grid { grid-template-columns: 1fr; }
+}
+
+/* ─────────── ACTIVES ─────────── */
+.actives__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+.active {
+  background: var(--ivory);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+  transition: all 0.3s ease;
+}
+.active:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(61, 42, 31, 0.08);
+}
+.active__photo {
+  aspect-ratio: 1;
+  background: linear-gradient(135deg, var(--peach-light) 0%, var(--nude) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.active__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.active__pct {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: var(--mocha);
+  color: var(--cream);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  font-variation-settings: 'opsz' 96;
+}
+.active__body { padding: 24px; }
+.active__name {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--mocha);
+  margin-bottom: 4px;
+  font-variation-settings: 'opsz' 96;
+}
+.active__origin {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--caramel);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.active__desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+.actives__cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) { .actives__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .actives__grid { grid-template-columns: 1fr; } }
+
+/* ─────────── TIMELINE ─────────── */
+.timeline { background: var(--cream-2); }
+.timeline__grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 20px;
+}
+.timeline__card {
+  background: var(--ivory);
+  border-radius: 18px;
+  overflow: hidden;
+  border: 1px solid var(--border-soft);
+}
+.timeline__photo {
+  aspect-ratio: 4/3;
+  background: linear-gradient(135deg, var(--nude) 0%, var(--peach-light) 100%);
+  position: relative;
+  overflow: hidden;
+}
+.timeline__photo img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.timeline__when {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  background: var(--ivory);
+  color: var(--mocha);
+  padding: 6px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.timeline__body { padding: 24px; }
+.timeline__title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  font-weight: 600;
+  color: var(--mocha);
+  margin-bottom: 8px;
+  font-variation-settings: 'opsz' 96;
+}
+.timeline__title span { color: var(--caramel); font-style: italic; }
+.timeline__desc {
+  font-size: 13px;
+  line-height: 1.55;
+  color: var(--text-soft);
+}
+
+.timeline__cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) { .timeline__grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 500px) { .timeline__grid { grid-template-columns: 1fr; } }
+
+/* ─────────── COMPARE ─────────── */
+.compare__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1fr;
+  gap: 20px;
+  margin-top: 20px;
+}
+.compare__col {
+  background: var(--ivory);
+  border-radius: 18px;
+  padding: 32px 28px;
+  border: 1px solid var(--border-soft);
+}
+.compare__col--winner {
+  background: var(--mocha);
+  color: var(--cream);
+  border-color: var(--mocha);
+  transform: scale(1.03);
+  box-shadow: 0 20px 50px rgba(61, 42, 31, 0.2);
+  position: relative;
+}
+.compare__badge {
+  position: absolute;
+  top: -14px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--caramel);
+  color: var(--cream);
+  font-size: 11px;
+  font-weight: 700;
+  padding: 6px 14px;
+  border-radius: 999px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.compare__col-label {
+  font-size: 11px;
+  font-weight: 700;
+  color: var(--brown-soft);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+.compare__col--winner .compare__col-label { color: var(--peach); }
+.compare__col-title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--mocha);
+  margin-bottom: 6px;
+  font-variation-settings: 'opsz' 96;
+}
+.compare__col--winner .compare__col-title { color: var(--cream); }
+.compare__col-price {
+  font-size: 14px;
+  color: var(--caramel);
+  font-weight: 600;
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid var(--border);
+}
+.compare__col--winner .compare__col-price {
+  color: var(--peach);
+  border-bottom-color: rgba(232, 185, 156, 0.2);
+}
+.compare__list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  font-size: 14px;
+  line-height: 1.4;
+  color: var(--text-soft);
+}
+.compare__col--winner .compare__list { color: rgba(245, 238, 225, 0.9); }
+.compare__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+.compare__list svg { width: 18px; height: 18px; flex-shrink: 0; margin-top: 1px; }
+.compare__list li.yes svg { color: var(--success); }
+.compare__list li.no svg { color: #B85A4A; }
+.compare__col--winner .compare__list li.yes svg { color: var(--peach); }
+
+.compare__cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) {
+  .compare__grid { grid-template-columns: 1fr; }
+  .compare__col--winner { transform: scale(1); }
+}
+
+/* ─────────── REVIEWS ─────────── */
+.reviews { background: var(--cream); }
+.reviews__hdr {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 40px;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.reviews__summary {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  background: var(--ivory);
+  padding: 20px 28px;
+  border-radius: 16px;
+  border: 1px solid var(--border-soft);
+}
+.reviews__score {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 48px;
+  font-weight: 700;
+  color: var(--mocha);
+  line-height: 1;
+  font-variation-settings: 'opsz' 96;
+}
+.reviews__meta { font-size: 13px; color: var(--text-soft); }
+.reviews__meta strong { color: var(--mocha); display: block; font-size: 14px; }
+
+.reviews__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+.review {
+  background: var(--ivory);
+  border-radius: 16px;
+  padding: 24px;
+  border: 1px solid var(--border-soft);
+}
+.review__stars { margin-bottom: 14px; }
+.review__title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--mocha);
+  margin-bottom: 8px;
+}
+.review__body {
+  font-size: 14px;
+  line-height: 1.55;
+  color: var(--text-soft);
+  margin-bottom: 16px;
+}
+.review__author {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-soft);
+}
+.review__avatar {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  background: var(--peach-light);
+  color: var(--caramel);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 14px;
+}
+.review__name {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--mocha);
+  line-height: 1.2;
+}
+.review__verified {
+  font-size: 11px;
+  color: var(--success);
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.review__verified svg { width: 12px; height: 12px; }
+
+.reviews__cta {
+  text-align: center;
+  margin-top: 48px;
+}
+
+@media (max-width: 900px) { .reviews__grid { grid-template-columns: 1fr; } }
+
+/* ─────────── FAQ ─────────── */
+.faq { background: var(--ivory); }
+.faq__list {
+  margin-top: 20px;
+  max-width: 900px;
+  background: var(--cream);
+  border-radius: 18px;
+  overflow: hidden;
+}
+.faq__item { border-bottom: 1px solid var(--border-soft); }
+.faq__item:last-child { border-bottom: none; }
+.faq__question {
+  width: 100%;
+  padding: 24px 28px;
+  background: none;
+  border: none;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  font-family: 'Manrope', sans-serif;
+  font-size: 17px;
+  font-weight: 600;
+  color: var(--mocha);
+  transition: background 0.2s;
+}
+.faq__question:hover { background: var(--cream-2); }
+.faq__toggle {
+  flex-shrink: 0;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: var(--ivory);
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  font-size: 18px;
+  color: var(--mocha);
+  font-weight: 600;
+}
+.faq__item.open .faq__toggle {
+  background: var(--caramel);
+  color: var(--cream);
+  border-color: var(--caramel);
+  transform: rotate(45deg);
+}
+.faq__answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+}
+.faq__item.open .faq__answer { max-height: 500px; }
+.faq__answer-inner {
+  padding: 0 28px 24px;
+  font-size: 15px;
+  line-height: 1.65;
+  color: var(--text-soft);
+}
+
+/* ─────────── FINAL CTA ─────────── */
+.finale {
+  padding: 0;
+  position: relative;
+}
+.finale__inner {
+  background: linear-gradient(135deg, var(--mocha) 0%, var(--brown) 100%);
+  color: var(--cream);
+  padding: 100px 40px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 24px;
+  margin: 40px;
+}
+.finale__glow {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(232, 185, 156, 0.2) 0%, transparent 70%);
+  top: -100px;
+  right: -100px;
+  pointer-events: none;
+}
+.finale__glow2 {
+  position: absolute;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(199, 152, 85, 0.15) 0%, transparent 70%);
+  bottom: -100px;
+  left: -100px;
+  pointer-events: none;
+}
+.finale__content { position: relative; z-index: 2; max-width: 780px; margin: 0 auto; }
+
+.finale__eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background: rgba(232, 185, 156, 0.15);
+  color: var(--peach);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 24px;
+}
+.finale__title {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: clamp(38px, 5vw, 68px);
+  font-weight: 500;
+  line-height: 1;
+  color: var(--cream);
+  margin-bottom: 24px;
+  font-variation-settings: 'opsz' 96;
+  letter-spacing: -0.03em;
+}
+.finale__title span { color: var(--peach); font-style: italic; }
+.finale__sub {
+  font-size: 17px;
+  line-height: 1.55;
+  color: rgba(245, 238, 225, 0.8);
+  margin-bottom: 40px;
+}
+
+.finale__pricing {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+.finale__old {
+  font-size: 18px;
+  color: rgba(245, 238, 225, 0.5);
+  text-decoration: line-through;
+}
+.finale__now {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 56px;
+  font-weight: 600;
+  color: var(--peach);
+  line-height: 1;
+  font-variation-settings: 'opsz' 96;
+}
+.finale__off {
+  background: var(--success);
+  color: var(--cream);
+  font-size: 12px;
+  font-weight: 700;
+  padding: 6px 12px;
+  border-radius: 999px;
+}
+.finale__parcel {
+  font-size: 14px;
+  color: rgba(245, 238, 225, 0.7);
+  margin-bottom: 32px;
+}
+.finale__parcel strong { color: var(--cream); font-weight: 600; }
+
+.finale .btn--primary { background: var(--peach); color: var(--mocha); }
+.finale .btn--primary:hover { background: var(--cream); }
+
+.finale__perks {
+  margin-top: 32px;
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: rgba(245, 238, 225, 0.5);
+  letter-spacing: 0.06em;
+}
+.finale__perks span { display: inline-flex; align-items: center; gap: 6px; }
+.finale__perks svg { width: 14px; height: 14px; color: var(--peach); }
+
+@media (max-width: 720px) {
+  .finale__inner { padding: 60px 24px; margin: 20px; }
+}
+
+/* ─────────── FOOTER ─────────── */
+.footer {
+  background: var(--mocha);
+  color: var(--cream);
+  padding: 40px 0 30px;
+}
+.footer__inner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  color: rgba(245, 238, 225, 0.5);
+  letter-spacing: 0.06em;
+}
+.footer__disclaimer {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid rgba(245, 238, 225, 0.08);
+  font-size: 11px;
+  color: rgba(245, 238, 225, 0.4);
+  line-height: 1.6;
+  max-width: 800px;
+}
+
+/* ─────────── STICKY MOBILE CTA ─────────── */
+.sticky-cta {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: var(--cream);
+  padding: 12px 20px;
+  border-top: 1px solid var(--border);
+  z-index: 90;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  box-shadow: 0 -4px 20px rgba(61, 42, 31, 0.1);
+}
+.sticky-cta__info { flex: 1; }
+.sticky-cta__price {
+  font-family: 'Bricolage Grotesque', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--mocha);
+  line-height: 1;
+  font-variation-settings: 'opsz' 96;
+}
+.sticky-cta__parcel {
+  font-size: 11px;
+  color: var(--text-soft);
+  margin-top: 2px;
+}
+.sticky-cta .btn { padding: 14px 22px; font-size: 14px; }
+
+@media (min-width: 900px) { .sticky-cta { display: none; } }
+
+/* ─────────── REVEAL ─────────── */
+.reveal {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+@media (prefers-reduced-motion: reduce) {
+  .reveal { opacity: 1; transform: none; transition: none; }
+  html { scroll-behavior: auto; }
+}
+</style>
+</head>
+<body>
+
+<!-- ANNOUNCEMENT -->
+<div class="announce">
+  ✦ Frete grátis acima de R$ 250 · Parcelamos em até <strong>6× sem juros</strong>
+</div>
+
+<!-- NAV -->
+<nav class="nav" id="nav">
+  <a href="#top" class="nav__brand">SKIN<span>1004</span></a>
+  <div class="nav__center">
+    <a href="#produto">O produto</a>
+    <a href="#beneficios">Benefícios</a>
+    <a href="#reviews">Avaliações</a>
+    <a href="#faq">FAQ</a>
+  </div>
+  <div class="nav__right">
+    <button class="nav__cart" aria-label="Carrinho">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="nav__cart-count">0</span>
+    </button>
+    <a href="#comprar" class="nav__cta">
+      Comprar
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="14" height="14"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</nav>
+
+<!-- ═══ HERO ═══ -->
+<section class="hero" id="top">
+  <div class="container">
+    <div class="hero__grid">
+      <div class="hero__text">
+        <div class="hero__badge">Bestseller K-Beauty</div>
+        <div class="hero__rating">
+          <span class="stars" aria-label="4.8 de 5 estrelas">
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          </span>
+          <span><strong>4.8</strong> · 2.847 avaliações</span>
+        </div>
+        <h1 class="hero__headline">Sua pele responde. Ela só precisa da <span>mensagem certa</span>.</h1>
+        <p class="hero__sub">A ampola coreana com <strong>10% de Matrixyl 3000®</strong> — o complexo de peptídeos mais usado no mundo em antienvelhecimento — enviado do Brasil, original, com nota fiscal.</p>
+        
+        <div class="hero__pricing">
+          <span class="hero__price-old">R$ 249</span>
+          <span class="hero__price-now">R$ 189</span>
+          <span class="hero__price-off">−24%</span>
+        </div>
+        <div class="hero__parcel">ou <strong>6× de R$ 31,50</strong> sem juros no cartão</div>
+        
+        <div class="hero__actions">
+          <a href="#comprar" class="btn btn--primary btn--large">
+            Adicionar ao carrinho
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/></svg>
+          </a>
+        </div>
+        
+        <div class="hero__perks">
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Enviado do Brasil</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> 100% original</span>
+          <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Chega em 3–5 dias</span>
+        </div>
+      </div>
+      
+      <div class="hero__visual">
+        <!-- SUBSTITUIR: use foto real do produto ou casting escolhido -->
+        <img class="hero__photo" src="https://images.unsplash.com/photo-1620916566398-39f1143ab7be?w=800&q=80" alt="Pele iluminada" onerror="this.style.display='none'">
+        <div class="hero__overlay">
+          <div class="hero__overlay-num">10%</div>
+          <div class="hero__overlay-text">
+            <strong>Matrixyl 3000®</strong>
+            Concentração declarada
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TRUST BAR ═══ -->
+<section class="trust">
+  <div class="container">
+    <div class="trust__grid">
+      <div class="trust__item">
+        <div class="trust__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg></div>
+        <div class="trust__text"><strong>4.8/5</strong> mais de 2.800 avaliações</div>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5"/><path d="M8 3H3v5"/><path d="M3 16v5h5"/><path d="M21 16v5h-5"/></svg></div>
+        <div class="trust__text"><strong>Original</strong> Direto da Coreia</div>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="m16 8 5-3v11l-5-3"/></svg></div>
+        <div class="trust__text"><strong>Envio rápido</strong> Estoque no Brasil</div>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="11" rx="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg></div>
+        <div class="trust__text"><strong>Compra segura</strong> SSL + Pix</div>
+      </div>
+      <div class="trust__item">
+        <div class="trust__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="5" width="20" height="14" rx="2"/><line x1="2" y1="10" x2="22" y2="10"/></svg></div>
+        <div class="trust__text"><strong>6× sem juros</strong> Todos os cartões</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ PRODUCT SHOWCASE ═══ -->
+<section class="section product" id="produto">
+  <div class="container">
+    <div class="product__grid">
+      <div class="product__visual reveal">
+        <div class="product__badge">Mais vendido</div>
+        <div class="product__badge2">
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          4.8
+        </div>
+        <!-- SUBSTITUIR: foto real do produto SKIN1004 -->
+        <img class="product__photo" src="https://images.unsplash.com/photo-1631730359585-38a4935cbec4?w=800&q=80" alt="Ampola Matrixyl 10" onerror="this.style.display='none'">
+      </div>
+      <div class="product__content reveal">
+        <div class="section__eyebrow">Ampola coreana · 30ml</div>
+        <h2>Matrixyl 10 <span>Boosting Shot</span> Ampoule</h2>
+        <p>A ampola concentrada da linha Lab in Nature. Peptídeos de última geração em uma semi-emulsão hidratante que absorve sem pegajosidade — e chega mais fundo graças às micro-spicules.</p>
+        
+        <div class="product__facts">
+          <div>
+            <div class="product__fact-label">Volume</div>
+            <div class="product__fact-value">30ml</div>
+          </div>
+          <div>
+            <div class="product__fact-label">Origem</div>
+            <div class="product__fact-value">Coreia do Sul</div>
+          </div>
+          <div>
+            <div class="product__fact-label">Ativo principal</div>
+            <div class="product__fact-value">Matrixyl 10%</div>
+          </div>
+          <div>
+            <div class="product__fact-label">Uso</div>
+            <div class="product__fact-value">2–3× semana</div>
+          </div>
+        </div>
+        
+        <a href="#comprar" class="btn btn--accent btn--large">
+          Quero minha ampola — R$ 189
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BENEFITS ═══ -->
+<section class="section benefits" id="beneficios">
+  <div class="container">
+    <div class="reveal">
+      <div class="section__eyebrow">Por que essa ampola</div>
+      <h2 class="section__title">Seis motivos pra <span>começar hoje</span>.</h2>
+      <p class="section__lede">Cada ativo dessa fórmula tem um trabalho específico. Combinados, entregam o que hidratante sozinho já não consegue mais.</p>
+    </div>
+    
+    <div class="benefits__grid">
+      <div class="benefit reveal">
+        <div class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg></div>
+        <h3>Firmeza real</h3>
+        <p>10% de Matrixyl 3000® sinaliza pra pele produzir colágeno novamente. Firmeza que se percebe no espelho, não só no rótulo.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+        <h3>Linhas suavizadas</h3>
+        <p>Reduz visivelmente linhas finas nos olhos, boca e testa em 4 a 8 semanas de uso consistente.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg></div>
+        <h3>Volume que voltou</h3>
+        <p>Volufiline™ 5% devolve preenchimento visual para áreas que perderam densidade — maçãs, contorno.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22a7 7 0 0 0 7-7c0-2-1-3.9-3-5.5s-3.5-4-4-6.5c-.5 2.5-2 4.9-4 6.5S5 13 5 15a7 7 0 0 0 7 7z"/></svg></div>
+        <h3>Hidratação profunda</h3>
+        <p>Ácido hialurônico hidrolisado que passa da superfície e devolve o "cheio" da pele bem descansada.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 3v18M3 12h18"/></svg></div>
+        <h3>Textura uniforme</h3>
+        <p>Micro-spicules criam micro-canais que refinam textura e devolvem viço em poucos dias.</p>
+      </div>
+      <div class="benefit reveal">
+        <div class="benefit__icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67 0C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/></svg></div>
+        <h3>Barreira reforçada</h3>
+        <p>Centella de Madagascar e Panthenol acalmam e fortalecem — equilibrando o poder dos peptídeos.</p>
+      </div>
+    </div>
+    
+    <div class="benefits__cta">
+      <a href="#comprar" class="btn btn--primary btn--large">
+        Adicionar ao carrinho
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ BEFORE / AFTER ═══ -->
+<section class="section results">
+  <div class="container">
+    <div class="reveal">
+      <div class="section__eyebrow">Resultado que a pele mostra</div>
+      <h2 class="section__title">Não é filtro.<br>É <span>12 semanas</span> de peptídeo.</h2>
+      <p class="section__lede">Colágeno não tem atalho. Mas tem previsibilidade. O que acontece com a pele em três meses de uso consistente.</p>
+    </div>
+    
+    <div class="results__grid">
+      <div class="results__card reveal">
+        <span class="results__label">Antes</span>
+        <!-- SUBSTITUIR: foto real de "antes" da campanha -->
+        <img class="results__photo" src="https://images.unsplash.com/photo-1616394584738-fc6e612e71b9?w=600&q=80" alt="Pele antes" onerror="this.style.display='none'">
+      </div>
+      <div class="results__card reveal">
+        <span class="results__label results__label--after">Depois · 12 semanas</span>
+        <!-- SUBSTITUIR: foto real de "depois" da campanha -->
+        <img class="results__photo" src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=600&q=80" alt="Pele depois" onerror="this.style.display='none'">
+      </div>
+    </div>
+    
+    <div class="results__meta reveal">
+      <strong>Aviso:</strong> imagens ilustrativas. Resultados variam de pessoa para pessoa e dependem da rotina completa (limpeza, hidratação, uso consistente e proteção solar diária). Uso 2–3× por semana durante 12 semanas.
+    </div>
+    
+    <div class="results__cta reveal">
+      <a href="#comprar" class="btn btn--primary btn--large">
+        Quero começar hoje — R$ 189
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ ACTIVES ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section__eyebrow">A fórmula</div>
+      <h2 class="section__title">Quatro ativos. <span>Concentração declarada</span>.</h2>
+      <p class="section__lede">Marcas dizem "com Matrixyl". A SKIN1004 diz <strong>quanto</strong>. E coloca isso no nome do produto.</p>
+    </div>
+    
+    <div class="actives__grid">
+      <div class="active reveal">
+        <div class="active__photo">
+          <!-- SUBSTITUIR: foto/ilustração do ativo -->
+          <img src="https://images.unsplash.com/photo-1583241800698-e8ab01830a07?w=400&q=80" alt="Matrixyl" onerror="this.style.display='none'">
+          <div class="active__pct">10%</div>
+        </div>
+        <div class="active__body">
+          <div class="active__name">Matrixyl 3000®</div>
+          <div class="active__origin">Sederma · França</div>
+          <p class="active__desc">Complexo patenteado de dois peptídeos que sinaliza para a pele produzir colágeno. O ativo mais usado no mundo em antienvelhecimento.</p>
+        </div>
+      </div>
+      
+      <div class="active reveal">
+        <div class="active__photo">
+          <img src="https://images.unsplash.com/photo-1570172619644-dfd03ed5d881?w=400&q=80" alt="Volufiline" onerror="this.style.display='none'">
+          <div class="active__pct">5%</div>
+        </div>
+        <div class="active__body">
+          <div class="active__name">Volufiline™</div>
+          <div class="active__origin">Anemarrhena Root</div>
+          <p class="active__desc">Ativo que aumenta volume localizado e devolve preenchimento visual para áreas que perderam densidade.</p>
+        </div>
+      </div>
+      
+      <div class="active reveal">
+        <div class="active__photo">
+          <img src="https://images.unsplash.com/photo-1556228720-195a672e8a03?w=400&q=80" alt="Ácido Hialurônico" onerror="this.style.display='none'">
+          <div class="active__pct">HA</div>
+        </div>
+        <div class="active__body">
+          <div class="active__name">Ácido Hialurônico</div>
+          <div class="active__origin">Hidrolisado</div>
+          <p class="active__desc">Segura água na pele em camadas — não só na superfície. Hidratação que dura muito além da aplicação.</p>
+        </div>
+      </div>
+      
+      <div class="active reveal">
+        <div class="active__photo">
+          <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=400&q=80" alt="Centella" onerror="this.style.display='none'">
+          <div class="active__pct">Cica</div>
+        </div>
+        <div class="active__body">
+          <div class="active__name">Centella Asiatica</div>
+          <div class="active__origin">Madagascar</div>
+          <p class="active__desc">A assinatura da SKIN1004. Acalma, reforça barreira e reduz vermelhidão — equilibrando o poder dos peptídeos.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="actives__cta reveal">
+      <a href="#comprar" class="btn btn--accent btn--large">
+        Comprar agora
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ TIMELINE ═══ -->
+<section class="section timeline">
+  <div class="container">
+    <div class="reveal">
+      <div class="section__eyebrow">Semana a semana</div>
+      <h2 class="section__title">O que acontece com <span>sua pele</span>.</h2>
+      <p class="section__lede">Peptídeo não é da noite pro dia. Mas é previsível. Aqui está o que esperar em cada fase.</p>
+    </div>
+    
+    <div class="timeline__grid">
+      <div class="timeline__card reveal">
+        <div class="timeline__photo">
+          <img src="https://images.unsplash.com/photo-1616683693504-3ea7e9ad6fec?w=400&q=80" alt="Semana 1" onerror="this.style.display='none'">
+          <span class="timeline__when">Semana 01</span>
+        </div>
+        <div class="timeline__body">
+          <h4 class="timeline__title">Hidratação e <span>viço</span></h4>
+          <p class="timeline__desc">Pele mais "cheia" ao acordar. Menos aspecto opaco no fim do dia. É o hialurônico entrando em ação.</p>
+        </div>
+      </div>
+      
+      <div class="timeline__card reveal">
+        <div class="timeline__photo">
+          <img src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=400&q=80" alt="Semana 4" onerror="this.style.display='none'">
+          <span class="timeline__when">Semana 04</span>
+        </div>
+        <div class="timeline__body">
+          <h4 class="timeline__title">Linhas <span>menos evidentes</span></h4>
+          <p class="timeline__desc">Marcas do travesseiro somem mais rápido. Linhas ao redor dos olhos suavizadas — sem maquiagem.</p>
+        </div>
+      </div>
+      
+      <div class="timeline__card reveal">
+        <div class="timeline__photo">
+          <img src="https://images.unsplash.com/photo-1570194065650-d99fb4bedf0a?w=400&q=80" alt="Semana 8" onerror="this.style.display='none'">
+          <span class="timeline__when">Semana 08</span>
+        </div>
+        <div class="timeline__body">
+          <h4 class="timeline__title">Firmeza <span>perceptível</span></h4>
+          <p class="timeline__desc">Contorno mandibular mais definido. Volume nas maçãs mais evidente. Matrixyl + Volufiline em ação.</p>
+        </div>
+      </div>
+      
+      <div class="timeline__card reveal">
+        <div class="timeline__photo">
+          <img src="https://images.unsplash.com/photo-1571875257727-256c39da42af?w=400&q=80" alt="Semana 12" onerror="this.style.display='none'">
+          <span class="timeline__when">Semana 12</span>
+        </div>
+        <div class="timeline__body">
+          <h4 class="timeline__title">O <span>resultado</span> completo</h4>
+          <p class="timeline__desc">Pele que se apresenta firme, uniforme e hidratada. Sem procedimento, sem downtime.</p>
+        </div>
+      </div>
+    </div>
+    
+    <div class="timeline__cta reveal">
+      <a href="#comprar" class="btn btn--primary btn--large">
+        Começar agora
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ COMPARE ═══ -->
+<section class="section">
+  <div class="container">
+    <div class="reveal">
+      <div class="section__eyebrow">Contra o quê você compara</div>
+      <h2 class="section__title">Três caminhos.<br>Só um faz sentido <span>em casa</span>.</h2>
+    </div>
+    
+    <div class="compare__grid">
+      <div class="compare__col reveal">
+        <div class="compare__col-label">Opção 01</div>
+        <div class="compare__col-title">Creme antirrugas comum</div>
+        <div class="compare__col-price">R$ 90–180 / mês</div>
+        <ul class="compare__list">
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Peptídeo não declarado</li>
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Fragrância e óleos</li>
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Resultado lento</li>
+          <li class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Uso diário</li>
+        </ul>
+      </div>
+      
+      <div class="compare__col compare__col--winner reveal">
+        <span class="compare__badge">A escolha certa</span>
+        <div class="compare__col-label">SKIN1004</div>
+        <div class="compare__col-title">Matrixyl 10 Ampoule</div>
+        <div class="compare__col-price">R$ 189 · dura 2–3 meses</div>
+        <ul class="compare__list">
+          <li class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> 10% de Matrixyl declarado</li>
+          <li class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Livre de fragrância, óleo, parabeno</li>
+          <li class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Resultado semana a semana</li>
+          <li class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Ritual noturno em 90s</li>
+          <li class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Micro-spicules entregam ativos</li>
+        </ul>
+      </div>
+      
+      <div class="compare__col reveal">
+        <div class="compare__col-label">Opção 03</div>
+        <div class="compare__col-title">Procedimento estético</div>
+        <div class="compare__col-price">R$ 800–2000 / sessão</div>
+        <ul class="compare__list">
+          <li class="yes"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"/></svg> Resultado mais intenso</li>
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Downtime 3–7 dias</li>
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> Precisa retornos</li>
+          <li class="no"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg> R$ 3–8k por protocolo</li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="compare__cta reveal">
+      <a href="#comprar" class="btn btn--accent btn--large">
+        Quero a opção do meio — R$ 189
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ REVIEWS ═══ -->
+<section class="section reviews" id="reviews">
+  <div class="container">
+    <div class="reveal">
+      <div class="section__eyebrow">Quem já usa</div>
+      <h2 class="section__title">2.847 avaliações <span>reais</span>.</h2>
+    </div>
+    
+    <div class="reviews__hdr reveal">
+      <div class="reviews__summary">
+        <div class="reviews__score">4.8</div>
+        <div>
+          <div class="stars" aria-hidden="true">
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+            <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          </div>
+          <div class="reviews__meta"><strong>2.847 avaliações</strong>96% recomendam</div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="reviews__grid">
+      <!-- SUBSTITUIR: reviews reais do seu Cadastro/Trustvox/Yampi -->
+      <div class="review reveal">
+        <div class="stars review__stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+        </div>
+        <div class="review__title">[DEPOIMENTO REAL 1]</div>
+        <p class="review__body">Espaço para review real do cliente. Recomendamos importar via plataforma como Trustvox, Yampi Reviews ou similar para autenticidade.</p>
+        <div class="review__author">
+          <div class="review__avatar">A</div>
+          <div>
+            <div class="review__name">Cliente Verificado</div>
+            <div class="review__verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Compra verificada</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="review reveal">
+        <div class="stars review__stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+        </div>
+        <div class="review__title">[DEPOIMENTO REAL 2]</div>
+        <p class="review__body">Espaço para review real. Reviews com detalhes específicos (tempo de uso, tipo de pele, região) convertem muito melhor que reviews genéricos.</p>
+        <div class="review__author">
+          <div class="review__avatar">B</div>
+          <div>
+            <div class="review__name">Cliente Verificado</div>
+            <div class="review__verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Compra verificada</div>
+          </div>
+        </div>
+      </div>
+      
+      <div class="review reveal">
+        <div class="stars review__stars">
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+          <svg viewBox="0 0 24 24"><path d="M12 2 15 9l7 .6-5.3 4.6 1.6 6.8L12 17.3 5.7 21l1.6-6.8L2 9.6 9 9z"/></svg>
+        </div>
+        <div class="review__title">[DEPOIMENTO REAL 3]</div>
+        <p class="review__body">Espaço para review real. Recomendamos rodar campanha pós-compra pedindo review em 30 e 60 dias para colher relatos com tempo de uso.</p>
+        <div class="review__author">
+          <div class="review__avatar">C</div>
+          <div>
+            <div class="review__name">Cliente Verificado</div>
+            <div class="review__verified"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><polyline points="20 6 9 17 4 12"/></svg> Compra verificada</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="reviews__cta reveal">
+      <a href="#comprar" class="btn btn--primary btn--large">
+        Fazer parte dessas avaliações
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FAQ ═══ -->
+<section class="section faq" id="faq">
+  <div class="container">
+    <div class="reveal">
+      <div class="section__eyebrow">Dúvidas frequentes</div>
+      <h2 class="section__title">Antes de <span>comprar</span>.</h2>
+    </div>
+    
+    <div class="faq__list reveal">
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>Em quanto tempo vejo resultado?</span>
+          <span class="faq__toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__answer"><div class="faq__answer-inner">Hidratação e viço são visíveis já na primeira semana. Firmeza e diminuição de linhas finas — o trabalho real dos peptídeos — leva de 4 a 8 semanas de uso consistente. O resultado completo aparece perto da semana 12. Colágeno não tem atalho.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>É seguro para pele sensível?</span>
+          <span class="faq__toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__answer"><div class="faq__answer-inner">A fórmula é livre de fragrância, óleos e álcool agressivo. Usa centella asiatica — que acalma. Ainda assim, as spicules podem causar leve formigamento nos primeiros usos. Faça patch test na área do maxilar por 24h antes do primeiro uso completo.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>Posso usar com retinol ou vitamina C?</span>
+          <span class="faq__toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__answer"><div class="faq__answer-inner">Sim — em noites alternadas. Peptídeos e retinol se complementam, mas aplicá-los juntos no mesmo momento pode aumentar a sensibilidade. Vitamina C fica melhor de manhã. Matrixyl 10, à noite.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>É original? Vem com nota fiscal?</span>
+          <span class="faq__toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__answer"><div class="faq__answer-inner">Sim. O produto é importado direto da SKIN1004 na Coreia, com selo de autenticidade e código de rastreio. Toda venda vem com nota fiscal.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>Quanto tempo dura o frasco de 30ml?</span>
+          <span class="faq__toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__answer"><div class="faq__answer-inner">Aproximadamente 2 a 3 meses com uso 2–3× por semana. É uma ampola de tratamento, não de uso diário permanente — a ideia é ciclos.</div></div>
+      </div>
+      <div class="faq__item">
+        <button class="faq__question" aria-expanded="false">
+          <span>Quanto tempo demora pra chegar?</span>
+          <span class="faq__toggle" aria-hidden="true">+</span>
+        </button>
+        <div class="faq__answer"><div class="faq__answer-inner">Enviamos do Brasil em até 24h úteis após a confirmação do pagamento. A entrega leva de 3 a 5 dias úteis para capitais e até 8 para o restante do país. Frete grátis acima de R$ 250.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FINAL CTA ═══ -->
+<section class="finale" id="comprar">
+  <div class="finale__inner">
+    <div class="finale__glow"></div>
+    <div class="finale__glow2"></div>
+    <div class="finale__content">
+      <div class="finale__eyebrow">◆ Últimas 47 unidades desta remessa</div>
+      <h1 class="finale__title">Sua pele não vai voltar sozinha.<br>Mas ela ainda <span>responde</span>.</h1>
+      <p class="finale__sub">A partir de hoje: uma ampola coreana, quatro ativos declarados, ritual noturno de 90 segundos. Enviado do Brasil, original, parcelado.</p>
+      
+      <div class="finale__pricing">
+        <span class="finale__old">R$ 249</span>
+        <span class="finale__now">R$ 189</span>
+        <span class="finale__off">−24%</span>
+      </div>
+      <div class="finale__parcel">ou <strong>6× de R$ 31,50</strong> sem juros</div>
+      
+      <a href="#" class="btn btn--primary btn--large">
+        Adicionar ao carrinho
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z"/><path d="M3 6h18"/></svg>
+      </a>
+      
+      <div class="finale__perks">
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Frete grátis acima de R$ 250</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Entrega em 3–5 dias</span>
+        <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg> Original com nota fiscal</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__inner">
+      <div>© SKIN1004 Brasil · Distribuidor autorizado</div>
+      <div>SAC · WhatsApp · Instagram</div>
+    </div>
+    <div class="footer__disclaimer">
+      Matrixyl® e Matrixyl 3000® são marcas registradas da Sederma. Volufiline™ é marca registrada da Sederma. As informações desta página têm caráter informativo e não substituem orientação médica ou dermatológica. Produto de uso externo. Resultados variam de pessoa para pessoa. Imagens de resultado são ilustrativas.
+    </div>
+  </div>
+</footer>
+
+<!-- STICKY MOBILE CTA -->
+<div class="sticky-cta">
+  <div class="sticky-cta__info">
+    <div class="sticky-cta__price">R$ 189</div>
+    <div class="sticky-cta__parcel">ou 6× R$ 31,50</div>
+  </div>
+  <a href="#comprar" class="btn btn--accent">
+    Comprar
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" width="16" height="16"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+  </a>
+</div>
+
+<script>
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    if (window.scrollY > 20) nav.classList.add('scrolled');
+    else nav.classList.remove('scrolled');
+  }, { passive: true });
+
+  const revealObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.08, rootMargin: '0px 0px -40px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+  document.querySelectorAll('.faq__question').forEach(q => {
+    q.addEventListener('click', () => {
+      const item = q.closest('.faq__item');
+      const isOpen = item.classList.toggle('open');
+      q.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+  });
+</script>
+
+</body>
+</html>
