@@ -1328,7 +1328,6 @@ button { font-family: inherit; }
   background: var(--ivory);
   border: 1px solid var(--border-soft);
   border-radius: 20px;
-  overflow: hidden;
   display: flex;
   flex-direction: column;
   position: relative;
@@ -1380,6 +1379,8 @@ button { font-family: inherit; }
   justify-content: center;
   padding: 20px;
   overflow: hidden;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
 }
 
 .kit__bottle {
@@ -1388,7 +1389,8 @@ button { font-family: inherit; }
   height: 78%;
   object-fit: contain;
   transition: transform 0.3s;
-  mix-blend-mode: multiply;
+  mix-blend-mode: darken;
+  filter: contrast(1.05);
 }
 
 /* Kit 1: 1 frasco centralizado */
