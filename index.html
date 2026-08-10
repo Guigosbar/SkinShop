@@ -1377,50 +1377,16 @@ button { font-family: inherit; }
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 20px;
   overflow: hidden;
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
 }
 
 .kit__bottle {
-  position: absolute;
-  width: 55%;
-  height: 78%;
-  object-fit: contain;
-  transition: transform 0.3s;
-  mix-blend-mode: darken;
-  filter: contrast(1.05);
-}
-
-/* Kit 1: 1 frasco centralizado */
-.kit__bottle--solo {
-  position: relative;
-  width: 65%;
-  height: 88%;
-}
-
-/* Kit 2: 2 frascos */
-.kit__bottle--left {
-  transform: translateX(-18%) rotate(-3deg);
-  z-index: 2;
-}
-.kit__bottle--right {
-  transform: translateX(18%) rotate(3deg);
-  z-index: 1;
-}
-
-/* Kit 3: 3 frascos em leque */
-.kit__bottle--far-left {
-  transform: translateX(-32%) rotate(-6deg);
-  z-index: 1;
-}
-.kit__bottle--center {
-  z-index: 3;
-}
-.kit__bottle--far-right {
-  transform: translateX(32%) rotate(6deg);
-  z-index: 2;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 .kit__body {
@@ -2093,7 +2059,7 @@ button { font-family: inherit; }
       <!-- Kit 1 -->
       <div class="kit reveal">
         <div class="kit__visual">
-          <img class="kit__bottle kit__bottle--solo" src="img/produto.webp" alt="1 ampola SKIN1004 Matrixyl 10" onerror="this.style.display='none'">
+          <img class="kit__bottle" src="img/kit1.jpeg" alt="Kit 1 Ampola SKIN1004 Matrixyl 10" onerror="this.style.display='none'">
         </div>
         <div class="kit__body">
           <div class="kit__label">Kit Individual</div>
@@ -2119,8 +2085,7 @@ button { font-family: inherit; }
       <div class="kit kit--popular reveal">
         <span class="kit__badge">Mais vendido</span>
         <div class="kit__visual">
-          <img class="kit__bottle kit__bottle--left" src="img/produto.webp" alt="2 ampolas SKIN1004 Matrixyl 10" onerror="this.style.display='none'">
-          <img class="kit__bottle kit__bottle--right" src="img/produto.webp" alt="" onerror="this.style.display='none'">
+          <img class="kit__bottle" src="img/kit2.jpeg" alt="Kit 2 Ampolas SKIN1004 Matrixyl 10" onerror="this.style.display='none'">
         </div>
         <div class="kit__body">
           <div class="kit__label">Kit Duo</div>
@@ -2147,9 +2112,7 @@ button { font-family: inherit; }
       <div class="kit reveal">
         <span class="kit__badge kit__badge--best">Melhor custo-benefício</span>
         <div class="kit__visual">
-          <img class="kit__bottle kit__bottle--far-left" src="img/produto.webp" alt="3 ampolas SKIN1004 Matrixyl 10" onerror="this.style.display='none'">
-          <img class="kit__bottle kit__bottle--center" src="img/produto.webp" alt="" onerror="this.style.display='none'">
-          <img class="kit__bottle kit__bottle--far-right" src="img/produto.webp" alt="" onerror="this.style.display='none'">
+          <img class="kit__bottle" src="img/kit3.jpeg" alt="Kit 3 Ampolas SKIN1004 Matrixyl 10" onerror="this.style.display='none'">
         </div>
         <div class="kit__body">
           <div class="kit__label">Kit Tratamento</div>
