@@ -203,6 +203,7 @@ button { font-family: inherit; }
   cursor: pointer;
   letter-spacing: 0.01em;
 }
+.btn svg { width: 18px; height: 18px; flex-shrink: 0; }
 .btn--primary {
   background: var(--mocha);
   color: var(--cream);
@@ -213,7 +214,7 @@ button { font-family: inherit; }
   transform: translateY(-2px);
   box-shadow: 0 8px 20px rgba(61, 42, 31, 0.25);
 }
-.btn--primary svg { width: 18px; height: 18px; }
+.btn--primary svg { width: 20px; height: 20px; }
 .btn--accent {
   background: var(--caramel);
   color: var(--cream);
@@ -1387,36 +1388,36 @@ button { font-family: inherit; }
   height: 78%;
   object-fit: contain;
   transition: transform 0.3s;
-  filter: drop-shadow(0 8px 20px rgba(61, 42, 31, 0.18));
+  mix-blend-mode: multiply;
 }
 
 /* Kit 1: 1 frasco centralizado */
 .kit__bottle--solo {
   position: relative;
-  width: 60%;
-  height: 82%;
+  width: 65%;
+  height: 88%;
 }
 
 /* Kit 2: 2 frascos */
 .kit__bottle--left {
-  transform: translateX(-22%) rotate(-6deg);
+  transform: translateX(-18%) rotate(-3deg);
   z-index: 2;
 }
 .kit__bottle--right {
-  transform: translateX(22%) rotate(6deg);
+  transform: translateX(18%) rotate(3deg);
   z-index: 1;
 }
 
 /* Kit 3: 3 frascos em leque */
 .kit__bottle--far-left {
-  transform: translateX(-38%) rotate(-10deg);
+  transform: translateX(-32%) rotate(-6deg);
   z-index: 1;
 }
 .kit__bottle--center {
   z-index: 3;
 }
 .kit__bottle--far-right {
-  transform: translateX(38%) rotate(10deg);
+  transform: translateX(32%) rotate(6deg);
   z-index: 2;
 }
 
